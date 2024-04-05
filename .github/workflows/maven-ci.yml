@@ -67,6 +67,7 @@ jobs:
           key: cached-build-${{github.sha}}
           path: .
   build:
+    needs: [maven_test]
     name: Build and analyze
     runs-on: ubuntu-latest
     steps:
